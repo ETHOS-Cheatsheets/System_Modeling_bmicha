@@ -1,0 +1,76 @@
+%!Tex root=ZF_bmicha_SysMod.tex
+\subsection{Closed Systems}
+    \vspace{4pt}
+    \hfill \boxed{\Delta E = Q - W}  $\qquad W = \int p \cdot dV$
+    % \begin{itemize}
+    %     \item $\Delta U = m \cdot c_{v} \cdot \Delta T$
+    % \end{itemize}
+    % \subsubsection{Incompressible Fluids}
+    %     \mathbox{c_p = c_v = c}
+    %     % \begin{itemize}
+    %     %     \item $\Delta Q = m \cdot c \cdot \Delta T$
+    %     % \end{itemize}
+
+\subsection{Open Systems}
+    \mathbox{\frac{dE}{dt} = \dot{Q} - \dot{W} + \sum \dot{m}_{in} \cdot h_{in} - \sum \dot{m}_{out} \cdot h_{out}}
+    \vspace{-1em}
+    % \begin{itemize}
+    %     \item $\Delta H = m \cdot c_{p} \cdot \Delta T$
+    % \end{itemize}
+\subsection{Ideal Gases}
+    \vspace{-1em}
+    \begin{align*}
+        h &= h(T) = m \cdot \int c_p\, d\vartheta\\
+        u &= u(T) = m \cdot \int c_v\, d\vartheta\\
+        p \cdot V &= n \cdot \bar{R} \cdot \vartheta = m \cdot R \cdot \vartheta\\
+        R &= \frac{\bar{R}}{M_{gas}} = c_p - c_v\\
+        \bar{R} &= 8.314~\frac{J}{ K \cdot mol } 
+    \end{align*}
+    \subsubsection{Perfect Gases - (no interatomic forces)}
+        \mathbox{c_p = c_v = c = \cancel{c}}
+        \vspace{-1em}
+    \subsubsection{Isentropic}
+        \vspace{-1em}
+        \begin{align*}
+            p \cdot V^\gamma &= \cancel{c} && \gamma = \frac{c_p}{c_v}\\
+            \vartheta \cdot V^{\gamma - 1} &= \cancel{c}\\
+            p^{1-\gamma} \cdot \vartheta^\gamma &= \cancel{c}
+        \end{align*}
+        $\gamma = \frac{5}{3}$, mono-atomic gas; $\gamma = \frac{7}{5}$, di-atomic gas
+\subsection{Heat Transfer}
+    \begin{center}
+        \begin{tabular}{lp{6pt}l}
+            Conduction&&$ \overset{*}{Q} = \frac{\kappa \cdot A}{l} \cdot  \Delta \vartheta $\\
+            Convection&&$ \overset{*}{Q} = k \cdot A \cdot  \Delta \vartheta $\\
+            Radiation&&$ \overset{*}{Q} = \varepsilon \cdot \sigma \cdot A \cdot  \Delta \vartheta $
+        \end{tabular}
+    \end{center}
+    \begin{itemize}
+        \item $\kappa\ $ thermal conductivity $\frac{W}{m K}$
+        \item $k\ $ heat transfer coefficient $\frac{W}{m^2 K}$
+        \item $\varepsilon\ $ emissivity
+        \item $\sigma\ $ Stephan-Boltzmann const, $5.67\cdot10^{-8}~\frac{W}{m^2 K^4}$
+    \end{itemize}
+\subsection{Incompressible Fluids}
+    \subsubsubsection{Mass flow through valve}
+        \vspace{0.5em}
+        $$
+            \overset{*}{m}(t) = c_d \cdot A(t) \cdot \sqrt{2\rho} \cdot \sqrt{p_{in}-p_{out}}
+        $$
+\subsection{Compressible Fluids}
+    \subsubsubsection{Mass flow through insenthalpic throttle}
+        \vspace{0.5em}
+        $$
+            \overset{*}{m}(t) = c_d \cdot A(t) \cdot \frac{p_{in}(t)}{\sqrt{R \cdot \vartheta_{in}(t)}} \cdot \Psi(p_{in},p_{out})
+        $$
+        with
+        $$
+            \Pi \vcentcolon= \frac{p_{out}}{p_{in}}
+        $$
+        $$
+            \Psi = 
+            \begin{cases}
+                \sqrt{\kappa \cdot \left( \frac{2}{\kappa + 1} \right)^{\frac{\kappa + 1 }{\kappa -1}}}, \quad \textrm{choked if } \Pi < \left( \frac{2}{\kappa + 1} \right)^{\frac{\kappa}{\kappa - 1}}\\[1em]
+                \Pi^{\frac{1}{\kappa}} \cdot \sqrt{\frac{2\kappa}{\kappa -1} \left[ 1 - \Pi^{\frac{\kappa-1}{\kappa}} \right]}, \quad \textrm{subsonic otw}
+            \end{cases}
+        $$

@@ -1,0 +1,29 @@
+\subsection{Bernoulli}
+    \textbf{Assumptions:}
+    \begin{itemize}
+        \item conservative forces
+        \item incompressible fluid
+    \end{itemize}
+    \subsubsection{Frictionless Bernoulli}
+        \textbf{Assumptions:}
+        \begin{itemize}
+            \item frictionless $\rightarrow$ valid along streamline
+            \item frictionless and $\underline{\nabla} \times \underline{u} = 0$ $\rightarrow$ valid in entire field
+        \end{itemize}
+        \mathbox{
+            \int_1^2 \frac{\partial \underline{u}}{\partial t} \cdot d \underline{s} + \left[ \frac{p}{\rho} + \frac{1}{2} \abs{\underline{u}}^2 + U \right]^2_1 = 0
+        }
+    \subsubsection{Stationary Bernoulli with Friction}
+        \mathbox{
+            \frac{p_1}{\rho} + \frac{1}{2} \abs{\underline{u}_1}^2 + g z_1 = \frac{p_2}{\rho} + \frac{1}{2} \abs{\underline{u}_2}^2 + g z_2 + \frac{\Delta p_{12}}{\rho}
+        }
+        \begin{itemize}
+            \item \textbf{Turbulent Pipe Friction}: 
+            $$ \frac{\Delta p_{12}}{\rho} = \lambda \frac{L}{D} \frac{\overline{u}^2}{2} $$
+            \item \textbf{Installations}:
+            $$  \frac{\Delta p_{12}}{\rho} = \zeta \frac{\overline{u}^2}{2}$$
+            \item \textbf{Pumps}:
+            $$ \Delta p_P = - \frac{\eta N}{\dot{V}} $$
+            \item \textbf{Turbines}:
+            $$ \Delta p_T = - \frac{N}{\eta \dot{V}} $$
+        \end{itemize}

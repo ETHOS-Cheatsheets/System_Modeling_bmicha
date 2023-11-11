@@ -1,0 +1,69 @@
+\subsection{Lagrange Formalism}
+    \begin{enumerate}
+        % \item Identify generalized coordinates $q_i$.
+        % \item Define \textbf{kinetic} $T(q,\dot{q})$ and \textbf{potential} $U(q)$ energy.
+        \item Define Lagrange function
+            \mathbox{
+                L(q,\dot{q}) = T((q,\dot{q})) - U(q)
+            }
+        \item Determine \textbf{generalized forces} $Q_i$\\[1em]
+            \begin{minipage}{0.48\linewidth}
+                \centering\underline{Force}
+                \begin{empheq}[box=\fbox]{align*}
+                    v_A &= J_A \cdot \dot{q} + \xi_A\\
+                    Q_A &= J_A^T \cdot F_A
+                \end{empheq}
+                \begin{itemize}
+                    \item[] $v_A$: velocity in $A$ 
+                    \item[] $J_A$: Jacobian in $A$
+                    \item[] $\xi_A$: offset term
+                    \item[] $F_A$: Force in $A$
+                \end{itemize}
+            \end{minipage}
+            \begin{minipage}{0.5\linewidth}
+                \centering\underline{Torque}
+                \begin{empheq}[box=\fbox]{align*}
+                    \omega_B &= J_B \cdot \dot{q} + \xi_B\\
+                    Q_B &= J_B^T \cdot M_B
+                \end{empheq}
+                \begin{itemize}
+                    \item[] $\omega_B$: ang.vel. in $B$ 
+                    \item[] $J_B$: Jacobian in $B$
+                    \item[] $\xi_B$: offset term
+                    \item[] $M_B$: Torque in $B$
+                \end{itemize}
+            \end{minipage}
+            \vspace{2pt}
+        \item Generate system of equations\\
+            - \underline{\textbf{Without} kinematic constraints}:
+            \vspace{-4pt}
+            \mathbox[$\ i = 1, \dots, 3n-k$]{
+                \frac{d}{dt} \left\{ \frac{\partial L}{\partial \dot{q}_i} \right\} - \frac{\partial L}{\partial q_i} = Q_i
+            }
+            \vspace{-10pt}
+            \begin{itemize}
+                \item[] $n$: \# rigid bodies
+                \item[] $k$: \# holonomic constraints 
+            \end{itemize}
+            - \underline{\textbf{With} kinematic constraints}:
+            \vspace{-4pt}
+            \mathbox[$\ i = 1, \dots, n$]{
+                \frac{d}{dt} \left\{ \frac{\partial L}{\partial \dot{q}_i} \right\} - \frac{\partial L}{\partial q_i} - \sum\limits_{j=1}^\nu \mu_j \alpha_{j,i}= Q_i
+            }
+            \vspace{-2em}
+            \mathbox{
+                \alpha^T_j \cdot \dot{q} = 0
+            }
+            \vspace{-10pt}
+            \begin{itemize}
+                \item[] $\to$ $\nu$ \textbf{additional} eqn's :  $\alpha^T_j \cdot \ddot{q} = 0$
+                \item[] $\nu$: \# non-holonomic contraints
+            \end{itemize}
+
+        \item implicit $\rightarrow$ explicit \hfill $\left(M = M^T\right)$
+            \begin{align*}
+                M(q) \cdot \ddot{q} = f(q,\dot{q},u)&  &\Rightarrow& &\ddot{q} =  M(q)^{-1} \cdot f(q,\dot{q},u)
+            \end{align*}
+        \vfill \null
+
+    \end{enumerate}

@@ -1,0 +1,12 @@
+% mathbox around math statements
+% PRE: #1 math expression
+\newcommand{\mathbox}[2][]{
+    \vskip4pt
+    \begin{center}
+        \boxed{
+            #2
+        } #1
+    \end{center}
+    
+    \vskip4pt
+}

@@ -1,0 +1,24 @@
+%!Tex root=ZF_bmicha_SysMod.tex
+\vspace{-0.5em}
+\begin{align*}
+    \alpha \ce{A} + \beta \ce{B} \underset{+}{\overset{-}{\ce{<=>}}}\gamma \ce{C} + \delta \ce{D}
+\end{align*}
+\subsection{Rate of Formation}
+Forward ($-$) and Backward ($+$) Reaction:
+\begin{align*}
+    \frac{d^-}{dt}[A] &= - \alpha \cdot r^- \cdot [A]^\alpha \cdot [B]^\beta\\
+    \frac{d^+}{dt}[A] &= \phantom{-} \alpha \cdot r^+ \cdot [C]^\gamma \cdot [D]^\delta
+\end{align*}
+Total rate of formation for $A$:
+$$  
+    \frac{d}{dt}[A] = \alpha \left( r^+ \cdot [C]^\gamma [D]^\delta - r^- \cdot [A]^\alpha [B]^\beta \right) \pm \frac{\overset{*}{m}(t)}{V \cdot M}
+$$
+\subsubsection{Arrheniusmodel}
+    $$
+        r^\pm = k^\pm (\vartheta, p, \dots) \cdot \exp\left(\frac{-E^\pm}{R \cdot \vartheta}\right)
+    $$
+    \begin{itemize}[label=-]
+        \item $E$: Activation Energy
+        \item $R$: Universal Gas Constant
+        \item $r$: Reaction constant
+    \end{itemize}

@@ -1,0 +1,44 @@
+\documentclass[8pt, a4paper]{mpscheatsheet}
+\input{setup/newcommands.tex}
+\usepackage{amsmath, physics}
+\usepackage{empheq} % border for align env
+\usepackage{cancel}
+\usepackage[version=4]{mhchem}
+\usepackage[hidelinks]{hyperref}
+
+\title{System Modeling}
+\author{Micha Bosshart - bmicha@ethz.ch}
+
+% reduce whitespace above and below equations
+\AtBeginDocument{
+    \setlength{\abovedisplayskip}{3pt plus 1pt minus 1pt}
+    \setlength{\belowdisplayskip}{3pt plus 1pt minus 1pt}
+}
+
+\begin{document}
+    \section{Systemmodeling for Control}
+        \input{Systemmodeling-for-Control/definitions.tex}
+        \input{Systemmodeling-for-Control/reservoir-based-approach.tex}
+        \input{Systemmodeling-for-Control/causality-diagram.tex}
+    \section{Mechanical Systems}
+        \input{Mechanical-Systems/basics.tex}
+        \input{Mechanical-Systems/moment-of-inertia.tex}
+        \input{Mechanical-Systems/lagrange-holonomic.tex}
+    \section{Hydraulic Systems}
+        \input{Hydraulic-Systems/hydraulic-systems.tex}
+        \vfill \null \columnbreak
+    \section{Electric Systems}
+        \input{Electric-Systems/electric-systems.tex}
+    \section{Thermodynamic Systems}
+        \input{Thermodynamic-Systems/closed-sys.tex}
+    \section{Chemical Systems}
+        \input{Chemical-Systems/chemical-systems.tex}
+        \vfill \null \columnbreak
+    \section{Fluiddynamics}
+        \input{Fluiddynamics/bernoulli.tex}
+        \vfill \null \columnbreak
+    \section{Analysis of Linear Systems}
+        \input{Analysis-Linear-Systems/linearization.tex}
+
+    
+\end{document}

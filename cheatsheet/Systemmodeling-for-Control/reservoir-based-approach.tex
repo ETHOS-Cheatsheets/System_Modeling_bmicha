@@ -1,0 +1,18 @@
+%!TEX root=ZF_bmicha_SysMod.tex
+\subsection{Reservoir-Based Approach}
+    \begin{enumerate}
+        \item Define \textbf{system boundaries}.
+        \begin{itemize}[label=-]
+            \item Inputs: What you can control (+ disturbances)
+            \item Outputs: What you can measure
+        \end{itemize}
+        \item Identify \textbf{relevant reservoirs} (mass, energy, information) and the corresponding \textbf{level variables}.
+        \item Formulate the \textbf{differential equations} (conservation laws) for all relevant reservoirs.
+        $$
+            \frac{d}{dt} (\textrm{reservoir content}) = \sum \textrm{inflows} - \sum \textrm{outflows}
+        $$
+        \item Formulate \textbf{algebraic relations} that express the \textit{flows between the reservoirs} as functions of the level variables.
+        \item Resolve implicit \textbf{alg. loops}. $U = U(I), I = I(U)$
+        \item Identify \textbf{unknown system parameters}.
+        \item \textbf{Validate} the model.
+    \end{enumerate}
